@@ -13,15 +13,13 @@ button.on("click", runEnter);
 form.on("submit",runEnter);
 
 // BONUS: Refactor to use Arrow Functions!
-data.forEach((ufo_sighting) => {
+tabledata.forEach((ufo_sighting) => {
   var row = tbody.append("tr");
   Object.entries(ufo_sighting).forEach(([key, value]) => {
     var cell = row.append("td");
     cell.text(value);
   });
 });
-
-
 
 // Create the function to run for both events:
 function runEnter() {
@@ -36,6 +34,14 @@ function runEnter() {
     console.log(inputValue);
     var filteredData = tableData.filter(sighting => sighting.datetime === inputValue);
     console.log(filteredData);
+
+    filteredData.forEach((ufo_sighting) => {
+        var row = tbody.append("tr");
+        Object.entries(ufo_sighting).forEach(([key, value]) => {
+          var cell = row.append("td");
+          cell.text(value);
+        });
+      });
 
 
 
