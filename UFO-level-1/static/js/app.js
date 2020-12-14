@@ -13,7 +13,7 @@ button.on("click", runEnter);
 form.on("submit",runEnter);
 
 // BONUS: Refactor to use Arrow Functions!
-tabledata.forEach((ufo_sighting) => {
+tableData.forEach((ufo_sighting) => {
   var row = tbody.append("tr");
   Object.entries(ufo_sighting).forEach(([key, value]) => {
     var cell = row.append("td");
@@ -42,7 +42,4 @@ function runEnter() {
           cell.text(value);
         });
       });
-
-
-
-}
+};
