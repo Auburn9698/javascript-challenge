@@ -32,9 +32,11 @@ function runEnter() {
     // Get the value property of the input element:
     var inputValue = inputElement.property("value");
     console.log(inputValue);
+    // Filter by date input value:
     var filteredData = tableData.filter(sighting => sighting.datetime === inputValue);
     console.log(filteredData);
 
+    //Append to table:
     filteredData.forEach((ufo_sighting) => {
         var row = tbody.append("tr");
         Object.entries(ufo_sighting).forEach(([key, value]) => {
