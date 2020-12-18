@@ -4,7 +4,7 @@ var tableData = data;
 // Select the button:
 var button = d3.select(".btn-default");
 // Select the form:
-var form = d3.select("#form");
+var form = d3.select("form");
 // Select the table body:
 var tbody = d3.select("tbody");
 
@@ -25,8 +25,8 @@ tableData.forEach((ufo_sighting) => {
 function runEnter() {
    // Prevent the page from refreshing:   
     d3.event.preventDefault();
-    // Clear table rows:
-    tbody.html("")
+    //// Clear table rows:
+    //tbody.html("")
     // Select the input element and get the raw HTML code:
     var inputElement = d3.select(".form-control");
     // Get the value property of the input element:
@@ -35,7 +35,8 @@ function runEnter() {
     // Filter by date input value:
     var filteredData = tableData.filter(sighting => sighting.datetime === inputValue);
     console.log(filteredData);
-
+    // Clear table rows:
+    tbody.html("")
     //Append to table:
     filteredData.forEach((ufo_sighting) => {
         var row = tbody.append("tr");
