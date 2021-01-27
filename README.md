@@ -18,3 +18,4 @@ You can handle this... right? The planet Earth needs to know what we have found!
 ![Image2](https://github.com/Auburn9698/javascript-challenge/blob/main/Images/Image1.png)
 
 
+ 
